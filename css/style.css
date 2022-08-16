@@ -1,0 +1,8 @@
+@import "fonts.css";
+@import "normalize.css";
+@import "global.css";
+
+h2 {
+  font-size: 45px;
+  font-weight: 900;
+}
