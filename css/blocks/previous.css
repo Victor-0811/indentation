@@ -1,0 +1,20 @@
+
+.previous__container:not(:last-child) {
+  margin: 0 0 30px 0;
+}
+
+.previous__picture {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.previous__text {
+  max-width: 480px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 0 30px;
+}
+
+.previous__text--indentLeft {
+  padding: 0 30px 0 0;
+}

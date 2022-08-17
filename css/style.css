@@ -2,7 +2,10 @@
 @import "normalize.css";
 @import "global.css";
 
-h2 {
-  font-size: 45px;
-  font-weight: 900;
-}
+
+@import "blocks/preview.css";
+@import "blocks/content.css";
+@import "blocks/description.css";
+@import "blocks/heading.css";
+@import "blocks/previous.css";
+@import "blocks/indent.css";

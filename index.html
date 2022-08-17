@@ -9,6 +9,157 @@
   <title>GO</title>
 </head>
 <body>
-  <h2>привет</h2>
+  <article class="article">
+    <div class="preview">
+      <div class="container">
+        <h1 class="preview__heading">Отступы в вёрстке: margin и padding</h1>
+
+        <div class="preview__description description">
+          <p class="description__text">
+            В этой статье я рассмотрю самые популярные "стандартные" решения для сохранения смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах организации отступов. Они сильно влияют на общую функциональность кода и, если всё сделано верно, позволяют легко вносить изменения в любую его часть. При этом другие части кода продолжат нормально работать.
+          </p>
+          <p class="description__text">
+            Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти за их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для более опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="container">
+        <div class="content__body">
+          <h2 class="content__title">Содержание:</h2>
+
+          <ol class="content__list">
+            <li class="content__item">
+              <a class="content__link" href="">
+                Отступ задается от предыдущего элемента к следующему
+              </a>
+            </li>
+
+            <li class="content__item">
+              <a class="content__link" href="">
+                Отступ задается последнему возможному элементу в DOM-дереве
+              </a>
+            </li>
+
+            <li class="content__item">
+              <a class="content__link" href="">
+                Для последнего элемента группы отступ обнуляется
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <section class="previous">
+      <div class="container">
+        <h2 class="heading">
+          Отступ задается от предыдущего элемента к следующему: от первого ко второму, сверху вниз, слева направо.
+        </h2>
+
+        <div class="previous__content">
+          <div class="previous__container">
+            <div class="previous__picture">
+              <figure class="previous__image">
+                <img class="previous__img" src="img/image%201.jpg" alt="">
+              </figure>
+            </div>
+
+            <div class="previous__text description">
+              <p class="description__text">
+                <b>ВАЖНО:</b> <span class="italic">margin</span> всегда задают от предыдущего элемента к следующему.
+              </p>
+
+              <p class="description__text">
+                Свойство <span class="italic">margin</span> необходимо только для того, чтобы отодвинуть своего соседа справа или снизу, поэтому используется <span class="italic">margin-right</span> и <span class="italic">margin-bottom</span>.
+              </p>
+
+              <p class="description__text">
+                (!) Свойства <span class="italic">margin-left</span> и <span class="italic">margin-top</span> используются крайне редко.
+              </p>
+
+              <p class="description__text">
+                Для <span class="italic">padding</span> верно обратное. Исключением является его применения в декоративных целях, например, для увеличения области ссылки.
+              </p>
+            </div>
+          </div>
+
+          <div class="previous__container">
+            <div class="previous__text previous__text--indentLeft description">
+              <p class="description__text">
+                Отступ внутри блока сверху или слева реализуется через <span class="italic">padding-top</span> и <span class="italic">padding-left</span> родителя.
+              </p>
+
+              <p class="description__text">
+                Отступы, как правило, делают в направлении от предыдущего элемента к следующему. Так элемент не будет толкать сам себя.
+              </p>
+
+              <p class="description__text">
+                Изначально элемент статичен, а его положение может меняться только под воздействием свойств других блоков или свойств родителя.
+              </p>
+            </div>
+
+            <div class="previous__picture">
+              <figure class="previous__image">
+                <img class="previous__img" src="img/image%202.jpg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="indent">
+      <div class="container">
+        <h2 class="heading">
+          Отступ задается последнему возможному элементу в DOM-дереве
+        </h2>
+
+        <p class="description__text">
+          Вообще, margin задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на этот список:
+        </p>
+        <ul class="indent__list">
+          <li class="indent__item">
+            <figure class="indent__picture">
+              <img class="indent__img" src="img/image%203.jpg" alt="">
+            </figure>
+          </li>
+
+          <li class="indent__item">
+            <figure class="indent__picture indent__picture--center">
+              <img class="indent__img" src="img/image%204.jpg" alt="">
+            </figure>
+          </li>
+
+          <li class="indent__item">
+            <p class="description__text">
+              Отступ делают за счёт соседних элементов, а не дочерних:
+            </p>
+            <figure class="indent__picture indent__picture--border">
+              <img class="indent__img" src="img/image%205.jpg" alt="">
+              <figcaption class="ident__important">
+                <b>ВАЖНО:</b> здесь. <span class="italic">list-item — последний возможный элемент в котором мы задаём отступ, чтобы разделить списки.</span>
+              </figcaption>
+            </figure>
+          </li>
+
+          <li class="indent__item">
+            <p class="description__text">
+              Казалось бы, можно задать отступ параграфу  &lt;p&gt;, либо обёртке &lt;article&gt; для достижения той же цели. Внешне останется все точно также, но так делать не рекомендуется.
+            </p>
+            <p class="description__text">
+              Предыдущий пример был достаточно простым, но бывает вложенность значительно больше.
+            </p>
+            <figure class="indent__picture">
+              <img class="indent__img" src="img/image%206.jpg" alt="">
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article>
 </body>
 </html>
+

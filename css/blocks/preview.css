@@ -1,0 +1,11 @@
+
+.preview {
+  margin: 0 0 50px 0;
+}
+
+.preview__heading {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0 0 30px 0;
+}

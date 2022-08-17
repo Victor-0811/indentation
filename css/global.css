@@ -15,8 +15,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 400;
-  color: #ffffff;
-  background-color: #1B1A1B;
+  color: #000000;
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
@@ -62,25 +61,24 @@ img {
   height: auto;
 }
 
-main {
-  padding: 146px 0 0 0;
+article {
+  padding: 60px 0 0 0;
 }
 
-section:not(:first-child) {
-  padding: 100px 0 0 0;
+section {
+  padding: 25px 0 25px 0;
+}
+
+section:not(:last-child) {
+  padding: 25px 0;
 }
 
 .container {
-  max-width: 1210px;
+  max-width: 1110px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+.italic {
+  font-style: italic;
 }
