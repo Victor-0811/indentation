@@ -4,8 +4,9 @@
 
 
 @import "blocks/preview.css";
-@import "blocks/content.css";
+@import "blocks/information.css";
 @import "blocks/description.css";
 @import "blocks/heading.css";
-@import "blocks/previous.css";
-@import "blocks/indent.css";
+@import "blocks/indent-previous.css";
+@import "blocks/last-indent.css";
+@import "blocks/content.css";

@@ -66,10 +66,6 @@ article {
 }
 
 section {
-  padding: 25px 0 25px 0;
-}
-
-section:not(:last-child) {
   padding: 25px 0;
 }
 
@@ -81,4 +77,8 @@ section:not(:last-child) {
 
 .italic {
   font-style: italic;
+}
+
+.center {
+  margin: 0 auto;
 }
